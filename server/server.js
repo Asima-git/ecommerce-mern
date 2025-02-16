@@ -42,7 +42,7 @@ app.use("/api/admin/orders", adminOrderRouter);
 app.use("/api/shop/search", searchRouter);
 app.use("/api/shop/review", shopReviewRouter);
 
-mongoose.connect(process.env.MONGO_URI_LOCAL)
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {2
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
